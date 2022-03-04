@@ -1,0 +1,17 @@
+﻿
+
+<div class="card-body">
+	<h2>@Candidato.Nome</h2>
+	<img src="@Candidato.ImageUrl" width="300" height="300" />
+	<h3>@Candidato.Votos Votos</h3>
+
+	<button class="btn btn-primary" @onclick="Candidato.Remove">-</button>
+	<input type="text" readonly="readonly" class="col-md-2" @bind="Candidato.Votos" />
+	<button class="btn btn-primary" @onclick="Candidato.Add">+</button>
+</div>
+
+@code {
+	[Parameter]
+	public Candidato Candidato { get; set; }
+
+}

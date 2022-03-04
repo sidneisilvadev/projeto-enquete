@@ -1,0 +1,12 @@
+﻿@page "/Enquete"
+
+@inject Repositorio Repositorio;
+
+<h1>Enquete!</h1>
+
+<div class="card-group">
+	@foreach (var candidato in Repositorio.Candidatos)
+	{
+		<CandidatoCard Candidato="candidato" />
+	}
+</div>

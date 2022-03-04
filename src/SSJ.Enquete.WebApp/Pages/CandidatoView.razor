@@ -1,0 +1,24 @@
+﻿
+
+<div class="d-inline-block">
+	<button class="btn btn-danger" @onclick="Remover">X</button>
+	&nbsp;
+	<input type="text" class="col-md-2" @bind="Candidato.Nome" />
+	<input type="text" class="col-md-6" @bind="Candidato.ImageUrl" />
+	&nbsp;
+	<button class="btn btn-primary" @onclick="Candidato.Remove">-</button>
+	<input type="text" readonly="readonly" class="col-md-1" @bind="Candidato.Votos" />
+	<button class="btn btn-primary" @onclick="Candidato.Add">+</button>
+	&nbsp;
+	<br />
+</div>
+
+@code {
+	[Parameter]
+	public Candidato Candidato { get; set; }
+
+	[Parameter]
+	public EventCallback<Candidato> OnRemove { get; set; }
+
+	protected async void Remover() => await OnRemove.InvokeAsync(Candidato);
+}
