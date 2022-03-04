@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>SSJ.Enquete.WebApp</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+
+<body>
+    <app>
+        <style>
+            #myProgress {
+                width: 100vw;
+                height: 30px;
+                background-color: #ddd;
+                display: block
+            }
+
+            #myBar {
+                width: 1%;
+                height: 30px;
+                background-color: purple;
+            }
+
+            .fullWidht {
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+            }
+
+            .loader {
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid blue;
+                border-right: 16px solid purple;
+                border-bottom: 16px solid green;
+                border-left: 16px solid red;
+                width: 120px;
+                height: 120px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <br /> <br />
+        <div class="fullWidht">
+            <div class="loader"></div>
+        </div>
+
+
+        <script>
+            function move() {
+                const elem = document.getElementById("myBar");
+                let width = 0;
+                frame();
+                function frame() {
+                    if (width < 100) {
+                        width++;
+                        elem.style.width = width + "%";
+                        setTimeout(frame, width * 2.5);
+                    }
+                }
+            }
+            move();
+        </script>
+    </app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+</body>
+
+</html>
