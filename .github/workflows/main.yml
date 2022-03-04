@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 
 # Run workflow on every push to the master branch
+#tutorial: https://swimburger.net/blog/dotnet/how-to-deploy-aspnet-blazor-webassembly-to-github-pages
 on:
   push:
     branches: [ master ]
