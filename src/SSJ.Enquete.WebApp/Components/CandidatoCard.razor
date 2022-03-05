@@ -1,0 +1,10 @@
+﻿<div class="card-body">
+	<h2>@Candidato.Nome</h2>
+	<img src=@Candidato.ImageUrl width=300 height=300 />
+	<h3>@Candidato.Votos Votos</h3>
+	<h3>@Candidato.Descricao</h3>
+	<button class="btn btn-primary" @onclick=Candidato.Remove>-</button>
+	<input type="text" readonly="readonly" class="col-md-2" @bind=Candidato.Votos />
+	<button class="btn btn-primary" @onclick=Candidato.Add>+</button>
+	<button class="btn btn-success" @onclick=Candidato.Add10>+10</button>
+</div>
