@@ -35,11 +35,13 @@ namespace SSJ.Enquete.WebApp.Classes
 
 		public IEnumerable<Candidato> Vencedores => Candidatos.AllWithMax(c => c.Votos);
 
-		public IEnumerable<Candidato> Perdedores => Candidatos.AllWithMin(c => c.Votos);	
+		public IEnumerable<Candidato> Perdedores => Candidatos.AllWithMin(c => c.Votos);
 
 		public bool EstaVencendo(Candidato candidato) => Vencedores.Any(v => v.Id == candidato.Id);
 
 		public bool EstaPerdendo(Candidato candidato) => Perdedores.Any(v => v.Id == candidato.Id);
+
+		public bool EstaEmpatado(Candidato candidato) => Vencedores.Count() > 1 && Vencedores.Any(v => v.Id == candidato.Id);
 
 		public async Task Load()
 		{

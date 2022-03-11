@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace SSJ.Enquete.WebApp.Classes
 
 		public async Task<TObject> GetAsync<TObject>(string uri)
 		{
-			var responseMessage = await _httpClient.GetAsync(uri);
+			var responseMessage = await _httpClient.GetAsync($"{uri}?t={DateTime.UtcNow.Ticks}");
 			var jsonString = await responseMessage.Content.ReadAsStringAsync();
 			return JsonConvert.DeserializeObject<TObject>(jsonString);
 		}

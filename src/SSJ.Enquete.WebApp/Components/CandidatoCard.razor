@@ -1,17 +1,23 @@
-﻿<div class="card-body">
-	<h2>@Candidato.Nome</h2>
-	<img src=@Candidato.ImageUrl width=300 height=300 />
-	<h3>@Candidato.Votos Votos</h3>
-	<h3>@Candidato.Mensagem</h3>
-	<h3>@Candidato.Descricao</h3>
-	<button class="btn btn-warning col-md-1" @onclick=@(e => Add(-10))>-10</button>
-	<button class="btn btn-primary col-md-1" @onclick=@(e => Add(-1))>-</button>
-	<input type="text" readonly="readonly" class="col-md-2" @bind=Candidato.Votos />
-	<button class="btn btn-primary col-md-1" @onclick=@(e => Add(+1))>+</button>
-	<button class="btn btn-secondary col-md-1" @onclick=@(e => Add(+10))>+10</button>
-	<div style="margin-top: 6px" ></div>
-	<button class="btn btn-danger col-md-2" @onclick=@(e => Add(-100))>-100</button>
-	<button class="btn btn-danger col-md-1" @onclick=@(e => Add(-100))>-50</button>
-	<button class="btn btn-success col-md-1" @onclick=@(e => Add(+100))>+50</button>
-	<button class="btn btn-success col-md-2" @onclick=@(e => Add(+100))>+100</button>
+﻿<div class="card-body" style="max-width: 500px;">
+	<div class="col-md-12"><h2>@Candidato.Nome</h2></div>
+	<img src=@Candidato.ImageUrl width=450 height=450 />
+	<div class="col-md-12"><h3>@Candidato.Votos Votos</h3></div>
+	<div class="col-md-12"><h3>@Candidato.Mensagem</h3></div>
+	<div class="col-md-12"><h3>@Candidato.Descricao</h3></div>
+
+	<div style="max-width: 500px;">
+		<div style="margin-top: 6px"></div>
+		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-10))>-10</button>
+		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(-1))>-</button>
+		<input type="text" readonly="readonly" class="col-md-2" @bind=Candidato.Votos />
+		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(+1))>+</button>
+		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+10))>+10</button>
+
+		<div style="margin-top: 6px"></div>
+		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-100))>-100</button>
+		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(-50))>-50</button>
+		<button class="btn btn-danger col-md-2" @onclick=@(e => Reset())>Zerar</button>
+		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(+50))>+50</button>
+		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+100))>+100</button>
+	</div>
 </div>
