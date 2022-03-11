@@ -1,24 +1,30 @@
 [
 	{
 		"Nome": "Bolsonaro",
-		"MensagemComemoracao": "Tô Ganhando, tá Okey?",
-		"MensagemIncentivo": "Decepcionado no tocante...",
+		"MensagemVencendo": "Tô Ganhando, tá Okey?",
+		"MensagemPerdendo": "Decepcionado no tocante...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Virei um centrão...",
 		"Descricao": "",
 		"ImageUrl": "https://avatars.githubusercontent.com/u/46561034?v=4",
 		"Votos": 0
 	},
 	{
 		"Nome": "Lula",
-		"MensagemComemoracao": "Passei na Frente, companheiro!",
-		"MensagemIncentivo": "Não quero perder de novo não...",
+		"MensagemVencendo": "Passei na Frente, companheiro!",
+		"MensagemPerdendo": "Não quero perder de novo não...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Virei um centrão...",
 		"Descricao": "",
 		"ImageUrl": "https://conteudo.imguol.com.br/c/noticias/41/2021/11/11/11nov2021---o-ex-presidente-luiz-inacio-lula-da-silva-pt-em-berlim-na-alemanha-1636644440404_v2_450x337.jpg",
 		"Votos": 0
 	},
 	{
-		"Nome": "Serjo Moro",
-		"MensagemComemoracao": "To indo pra galera!!!",
-		"MensagemIncentivo": "Peço as devidas escusas...",
+		"Nome": "Sérgio Moro",
+		"MensagemVencendo": "To indo pra galera!!!",
+		"MensagemPerdendo": "Peço as devidas escusas...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Virei um centrão...",
 		"Descricao": "",
 		"ImageUrl": "https://midias.correiobraziliense.com.br/_midias/jpg/2022/02/04/675x450/1_whatsapp_image_2022_01_23_at_17_16_03-7414263.jpeg?20220204223446?20220204223446",
 		"Votos": 0
