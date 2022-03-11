@@ -1,8 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace SSJ.Enquete.WebApp.Classes
@@ -30,18 +27,11 @@ namespace SSJ.Enquete.WebApp.Classes
 		{
 			if (_sequence.GetValueFor("Candidato") == 0)
 			{
-				var setup = await GetAsync<Setup>("datasets/setup.json");
-				var candidatos = await GetAsync<List<Candidato>>(setup.Resource);
+				var apiClient = new ApiClient();
+				var setup = await apiClient.GetAsync<Setup>("datasets/setup.json");
+				var candidatos = await apiClient.GetAsync<List<Candidato>>(setup.Resource);
 				Adicionar(candidatos);
 			}
-		}
-
-		private async Task<TObject> GetAsync<TObject>(string uri)
-		{
-			var _httpClient = new HttpClient() { BaseAddress = new Uri("https://raw.githubusercontent.com/sidneisilvadev/projeto-enquete/master/") };
-			var responseMessage = await _httpClient.GetAsync(uri);
-			var jsonString = await responseMessage.Content.ReadAsStringAsync();
-			return JsonConvert.DeserializeObject<TObject>(jsonString);
 		}
 	}
 }

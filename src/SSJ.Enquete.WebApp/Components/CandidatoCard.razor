@@ -2,6 +2,8 @@
 	<h2>@Candidato.Nome</h2>
 	<img src=@Candidato.ImageUrl width=300 height=300 />
 	<h3>@Candidato.Votos Votos</h3>
+	<h3>@Candidato.MensagemComemoracao</h3>
+	<h3>@Candidato.MensagemIncentivo</h3>
 	<h3>@Candidato.Descricao</h3>
 	<button class="btn btn-warning col-md-1" @onclick=@(e => Candidato.Add(-10))>-10</button>
 	<button class="btn btn-primary col-md-1" @onclick=@(e => Candidato.Add(-1))>-</button>
