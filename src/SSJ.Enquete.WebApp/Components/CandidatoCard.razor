@@ -3,8 +3,14 @@
 	<img src=@Candidato.ImageUrl width=300 height=300 />
 	<h3>@Candidato.Votos Votos</h3>
 	<h3>@Candidato.Descricao</h3>
-	<button class="btn btn-primary" @onclick=Candidato.Remove>-</button>
+	<button class="btn btn-warning col-md-1" @onclick=@(e => Candidato.Add(-10))>-10</button>
+	<button class="btn btn-primary col-md-1" @onclick=@(e => Candidato.Add(-1))>-</button>
 	<input type="text" readonly="readonly" class="col-md-2" @bind=Candidato.Votos />
-	<button class="btn btn-primary" @onclick=Candidato.Add>+</button>
-	<button class="btn btn-success" @onclick=Candidato.Add10>+10</button>
+	<button class="btn btn-primary col-md-1" @onclick=@(e => Candidato.Add(+1))>+</button>
+	<button class="btn btn-secondary col-md-1" @onclick=@(e => Candidato.Add(+10))>+10</button>
+	<div style="margin-top: 6px" ></div>
+	<button class="btn btn-danger col-md-2" @onclick=@(e => Candidato.Add(-100))>-100</button>
+	<button class="btn btn-danger col-md-1" @onclick=@(e => Candidato.Add(-100))>-50</button>
+	<button class="btn btn-success col-md-1" @onclick=@(e => Candidato.Add(+100))>+50</button>
+	<button class="btn btn-success col-md-2" @onclick=@(e => Candidato.Add(+100))>+100</button>
 </div>

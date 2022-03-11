@@ -1,28 +1,47 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace SSJ.Enquete.WebApp.Classes
 {
-    public class Repositorio
-    {
-        private readonly List<Candidato> _candidatos = new List<Candidato>();
-        private readonly Sequence _sequence;
+	public class Repositorio
+	{
+		private readonly Sequence _sequence;
+		private readonly List<Candidato> _candidatos = new List<Candidato>();
+		public IEnumerable<Candidato> Candidatos => _candidatos;
 
-        public IEnumerable<Candidato> Candidatos => _candidatos;
+		public Repositorio(Sequence sequence) => _sequence = sequence;
 
-        public Repositorio(Sequence sequence)
-        {
-            _sequence = sequence;
-            Adicionar(new Candidato { Nome = "Bolsonaro", ImageUrl = "https://avatars.githubusercontent.com/u/46561034?v=4" });
-            Adicionar(new Candidato { Nome = "Lula", ImageUrl = "https://conteudo.imguol.com.br/c/noticias/41/2021/11/11/11nov2021---o-ex-presidente-luiz-inacio-lula-da-silva-pt-em-berlim-na-alemanha-1636644440404_v2_450x337.jpg" });
-            Adicionar(new Candidato { Nome = "Moro", ImageUrl = "https://s2.glbimg.com/lBJ1jBHCtf_Ig8_V8cGxziSsG3w=/0x0:1153x783/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_63b422c2caee4269b8b34177e8876b93/internal_photos/bs/2022/Y/G/1PPs0qQdGHUWze0iWnSg/foto21pol-201-moro-a8.jpg" });
-        }
+		public bool Adicionar(IEnumerable<Candidato> candidatos) => candidatos.All(c => Adicionar(c));
 
-        public void Adicionar(Candidato candidato)
-        {
-            candidato.Id = _sequence.NextValueFor("Candidato");
-            _candidatos.Add(candidato);
-        }
+		public bool Adicionar(Candidato candidato)
+		{
+			candidato.Id = _sequence.NextValueFor("Candidato");
+			_candidatos.Add(candidato);
+			return true;
+		}
 
-        public void Remover(Candidato candidato) => _candidatos.Remove(candidato);
-    }
+		public void Remover(Candidato candidato) => _candidatos.Remove(candidato);
+
+		public async Task Load()
+		{
+			if (_sequence.GetValueFor("Candidato") == 0)
+			{
+				var setup = await GetAsync<Setup>("datasets/setup.json");
+				var candidatos = await GetAsync<List<Candidato>>(setup.Resource);
+				Adicionar(candidatos);
+			}
+		}
+
+		private async Task<TObject> GetAsync<TObject>(string uri)
+		{
+			var _httpClient = new HttpClient() { BaseAddress = new Uri("https://raw.githubusercontent.com/sidneisilvadev/projeto-enquete/master/") };
+			var responseMessage = await _httpClient.GetAsync(uri);
+			var jsonString = await responseMessage.Content.ReadAsStringAsync();
+			return JsonConvert.DeserializeObject<TObject>(jsonString);
+		}
+	}
 }
