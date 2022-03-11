@@ -5,7 +5,7 @@
 		"MensagemIncentivo": "",
 		"Descricao": "",
 		"ImageUrl": "",
-		"Votos": ""
+		"Votos": 0
 	},
 	{
 		"Nome": "",
@@ -13,6 +13,6 @@
 		"MensagemIncentivo": "",
 		"Descricao": "",
 		"ImageUrl": "",
-		"Votos": ""
+		"Votos": 0
 	}
 ]
