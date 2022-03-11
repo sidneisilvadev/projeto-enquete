@@ -8,7 +8,7 @@
 		<br />
 	</div>
 
-	@foreach (var candidato in Repositorio.Candidatos)
+	@foreach (var candidato in Repositorio.Enquete.Candidatos)
 	{
 		<CandidatoView @key="candidato.Id" Candidato="candidato" OnRemove="Remover" />
 	}

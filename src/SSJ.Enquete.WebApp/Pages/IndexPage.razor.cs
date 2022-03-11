@@ -18,13 +18,13 @@ namespace SSJ.Enquete.WebApp.Pages
 
 		private async void Adicionar()
 		{
-			Repositorio.Adicionar(new Candidato());
+			Repositorio.Enquete.Adicionar(new Candidato());
 			await Task.CompletedTask;
 		}
 
 		private async void Remover(Candidato candidato)
 		{
-			Repositorio.Remover(candidato);
+			Repositorio.Enquete.Remover(candidato);
 			await Task.CompletedTask;
 		}
 	}

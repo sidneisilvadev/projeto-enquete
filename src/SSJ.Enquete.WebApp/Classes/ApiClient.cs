@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
-using System;
+﻿using Newtonsoft.Json;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -17,13 +15,6 @@ namespace SSJ.Enquete.WebApp.Classes
 			var responseMessage = await _httpClient.GetAsync(uri);
 			var jsonString = await responseMessage.Content.ReadAsStringAsync();
 			return JsonConvert.DeserializeObject<TObject>(jsonString);
-		}
-
-		public static ApiClient Create(IServiceProvider serviceProvider, string httpName)
-		{
-			var httpClientFactory = serviceProvider.GetService<IHttpClientFactory>();
-			var httpClient = httpClientFactory.CreateClient(httpName);
-			return new ApiClient(httpClient);
 		}
 	}
 }
