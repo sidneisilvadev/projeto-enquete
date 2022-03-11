@@ -1,5 +1,6 @@
 ﻿using SSJ.Enquete.WebApp.Classes;
 using Microsoft.AspNetCore.Components;
+using System.Threading.Tasks;
 
 namespace SSJ.Enquete.WebApp.Pages
 {
@@ -9,5 +10,6 @@ namespace SSJ.Enquete.WebApp.Pages
         [Inject]
         private Repositorio Repositorio { get; set; }
 
+        public async Task NotifyChange(Candidato candidato) => await Task.CompletedTask;
     }
 }

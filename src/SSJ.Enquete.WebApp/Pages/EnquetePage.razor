@@ -3,6 +3,6 @@
 <div class="card-group" style="max-width: 100vw !important;">
 	@foreach (var candidato in Repositorio.Enquete.Candidatos)
 	{
-		<CandidatoCard @key="candidato.Id" Candidato="candidato" />
+		<CandidatoCard @key="candidato.Id" Candidato=candidato OnChange=NotifyChange />
 	}
 </div>

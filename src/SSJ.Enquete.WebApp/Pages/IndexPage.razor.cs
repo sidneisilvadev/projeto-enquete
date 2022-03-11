@@ -13,7 +13,7 @@ namespace SSJ.Enquete.WebApp.Pages
 		protected override async Task OnParametersSetAsync()
 		{
 			await base.OnParametersSetAsync();
-			await Repositorio.Load();
+			await Repositorio.Enquete.Load();
 		}
 
 		private async void Adicionar()
