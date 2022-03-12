@@ -15,6 +15,10 @@
 		{
 			"path": "datasets",
 			"name": "enquete_amigos.json"
+		},
+		{
+			"path": "datasets/futebol",
+			"name": "brasileirao.json"
 		}
 	]
 }
