@@ -1,0 +1,16 @@
+{
+	"arquivos": [
+		{
+			"path": "datasets",
+			"name": "candidatos.json"
+		},
+		{
+			"path": "datasets",
+			"name": "presidenciaveis.json"
+		},
+		{
+			"path": "datasets",
+			"name": "times-futebol.json"
+		}
+	]
+}
