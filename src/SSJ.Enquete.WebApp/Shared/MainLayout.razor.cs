@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using SSJ.Enquete.WebApp.Classes;
-
-namespace SSJ.Enquete.WebApp.Shared
+﻿namespace SSJ.Enquete.WebApp.Shared
 {
 	public partial class MainLayout
 	{
