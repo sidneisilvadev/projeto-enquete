@@ -21,6 +21,7 @@ namespace SSJ.Enquete.WebApp.Classes
 			var httpClient = _serviceProvider.GetHttpClient("GitHub");
 			var apiClient = new ApiClient(httpClient);
 			Config = await apiClient.GetConfig();
+			await List(EventCallback.Empty);
 		}
 
 		public async Task List(EventCallback onFinish, string resource = null)

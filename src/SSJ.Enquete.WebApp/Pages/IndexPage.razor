@@ -1,7 +1,7 @@
 ﻿<div class="container" style="max-width: 100vw !important;">
 	<div class="d-block">
 		<div style="margin-top: 1px">
-			<select class="custom-select col-md-2" id="cbRecurso" name="cbRecurso" @bind=Resources >
+			<select class="custom-select col-md-3" id="cbRecurso" name="cbRecurso" @bind=Resources >
 				@foreach (var item in Repositorio?.Config?.Arquivos)
 				{
 					<option value="@item.Recurso">@item.Recurso</option>

@@ -1,0 +1,20 @@
+﻿<div class="d-block">
+	<div style="margin-top: 1px; display: flex; flex-direction: row">
+		<img src=@Candidato.ImageUrl alt=@Candidato.Nome title=@Candidato.Nome width=64 height=64 style="display: inline-block;"/>
+		<div style="margin-left: 10px; min-width: 700px; display: inline-block;">
+			<div>
+				<div style="display: inline-block; min-width: 100px">@Candidato.Nome</div>
+				<input type="text" class="col-md-1" @bind="Candidato.Votos" readonly="readonly" placeholder="Votos" />
+				<button class="btn btn-danger col-md-1" @onclick=@(e => Add(-10)) title="Remove 10 Votos">-10</button>
+				<button class="btn btn-warning col-md-1" @onclick=@(e => Add(-1)) title="Remove 1 Voto">-1</button>
+				<button class="btn btn-primary col-md-1" @onclick=@(e => Add(+1)) title="Adiciona 1 Voto">+1</button>
+				<button class="btn btn-success col-md-1" @onclick=@(e => Add(+10)) title="Adiciona 10 Votos">+10</button>
+			</div>
+			<div style="margin-top: 1px">
+				<div style="display: inline-block; min-width: 100px">@Candidato.Descricao</div>
+				<div style="display: inline-block; min-width: 100px">@Candidato.Mensagem</div>
+			</div>
+		</div>
+	</div>
+	<hr />
+</div>

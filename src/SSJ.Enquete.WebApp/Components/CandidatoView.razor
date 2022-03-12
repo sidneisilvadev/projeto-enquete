@@ -1,24 +1,29 @@
 ﻿<div class="d-block">
-	<div style="margin-top: 1px">
-		<button class="btn btn-danger" @onclick="Remover" title="Remove este candidato da enquete"><span class="oi oi-x"></span></button>
-		<input type="text" class="col-md-3" @bind="Candidato.Nome" placeholder="Nome" />
-		<input type="text" class="col-md-7" @bind="Candidato.Descricao" placeholder="Descricao" />
-		<input type="text" class="col-md-1" @bind="Candidato.Votos" placeholder="Quantidade de votos" />
-	</div>
-	<div style="margin-top: 1px">
-		<input type="text" class="col-md-12" @bind="Candidato.ImageUrl" placeholder="Url da Imagem" />
-	</div>
-	<div style="margin-top: 1px">
-		<input type="text" class="col-md-12" @bind="Candidato.MensagemPerdendo" placeholder="Mensagem Perdendo" />
-	</div>
-	<div style="margin-top: 1px">
-		<input type="text" class="col-md-12" @bind="Candidato.MensagemVencendo" placeholder="Mensagem Vencendo" />
-	</div>
-	<div style="margin-top: 1px">
-		<input type="text" class="col-md-12" @bind="Candidato.MensagemEmpatado" placeholder="Mensagem Empatado" />
-	</div>
-	<div style="margin-top: 1px">
-		<input type="text" class="col-md-12" @bind="Candidato.MensagemNoCentro" placeholder="Mensagem No Centro" />
+	<div style="margin-top: 1px; display: flex; flex-direction: row">
+		<img src=@Candidato.ImageUrl alt=@Candidato.Nome title=@Candidato.Nome width=128 height=128 style="display: inline-block;" />
+		<div style="margin-left: 10px; max-width: 100%; width: 100%; display: inline-block;">
+			<div>
+				<button class="btn btn-danger" @onclick="Remover" title="Remove este candidato da enquete"><span class="oi oi-x"></span></button>
+				<input type="text" class="col-md-3" @bind="Candidato.Nome" placeholder="Nome" />
+				<input type="text" class="col-md-7" @bind="Candidato.Descricao" placeholder="Descricao" />
+				<input type="text" class="col-md-1" @bind="Candidato.Votos" placeholder="Quantidade de votos" />
+			</div>
+			<div style="margin-top: 1px">
+				<input type="text" class="col-md-12" @bind="Candidato.ImageUrl" placeholder="Url da Imagem" />
+			</div>
+			<div style="margin-top: 1px">
+				<input type="text" class="col-md-12" @bind="Candidato.MensagemPerdendo" placeholder="Mensagem Perdendo" />
+			</div>
+			<div style="margin-top: 1px">
+				<input type="text" class="col-md-12" @bind="Candidato.MensagemVencendo" placeholder="Mensagem Vencendo" />
+			</div>
+			<div style="margin-top: 1px">
+				<input type="text" class="col-md-12" @bind="Candidato.MensagemEmpatado" placeholder="Mensagem Empatado" />
+			</div>
+			<div style="margin-top: 1px">
+				<input type="text" class="col-md-12" @bind="Candidato.MensagemNoCentro" placeholder="Mensagem No Centro" />
+			</div>
+		</div>
 	</div>
 	<hr />
 </div>

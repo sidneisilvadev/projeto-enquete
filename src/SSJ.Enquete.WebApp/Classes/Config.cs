@@ -6,6 +6,7 @@ namespace SSJ.Enquete.WebApp.Classes
 {
 	public class Config
 	{
+		public string Saudacao { get; set; }
 		public List<Arquivo> Arquivos { get; set; }
 
 		[JsonIgnore]

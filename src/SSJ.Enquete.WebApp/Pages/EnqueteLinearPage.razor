@@ -1,0 +1,11 @@
+﻿<div class="card-group" style="max-width: 100vw !important; justify-content: center">
+	<h1>@Repositorio.Config.Saudacao</h1>
+</div>
+
+<div class="card-group" style="max-width: 100vw !important; justify-content: center; flex-direction: column;">
+	<div class="d-block"> <hr /> </div>
+	@foreach (var candidato in Repositorio.Enquete.Candidatos)
+	{
+		<CandidatoLinear @key="candidato.Id" Candidato=candidato OnChange=NotifyChange />
+	}
+</div>

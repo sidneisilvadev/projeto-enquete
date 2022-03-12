@@ -17,6 +17,7 @@ namespace SSJ.Enquete.WebApp.Components
             Candidato.Add(quantidade);
             await OnChange.InvokeAsync(Candidato);
 		}
+
         public async Task Reset()
         {
             Candidato.Votos = 0;
