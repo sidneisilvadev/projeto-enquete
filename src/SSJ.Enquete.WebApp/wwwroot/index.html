@@ -2,104 +2,68 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Enquete</title>
-    <base href="/" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="css/app.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/BlazorDownloadFile.js"></script>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Enquete</title>
+	<base href="/" />
+	<link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+	<link href="css/app.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/BlazorDownloadFile.js"></script>
 </head>
 
 <body>
-    <app>
-        <style>
-            #myProgress {
-                width: 100vw;
-                height: 30px;
-                background-color: #ddd;
-                display: block;
-            }
+	<app>
+		<style>
+			#myProgress {
+				width: 100vw;
+				height: 30px;
+				background-color: #ddd;
+				display: block;
+			}
 
 			#myBar {
 				width: 1%;
 				height: 30px;
-				background-color: purple;
+				background-color: black;
 				display: block;
 			}
+		</style>
 
-            .fullWidht {
-                width: 100vw;
-                display: flex;
-                justify-content: center;
-            }
+		<div style="position:absolute; top:30vh; width:100%; text-align:center">
+			<h1>Enquete</h1>
+			<div style="display:flex; gap:10px; justify-content:center; align-items:center">
+				<div class="spinner-border" role="status"></div>
+				A aplicação está sendo iniciada...
+			</div>
+			<br /> <br />
+			<div id="myProgress">
+				<div id="myBar"></div>
+			</div>
+		</div>
 
-            .loader {
-                border: 16px solid #f3f3f3;
-                border-radius: 50%;
-                border-top: 16px solid blue;
-                border-right: 16px solid purple;
-                border-bottom: 16px solid green;
-                border-left: 16px solid red;
-                width: 120px;
-                height: 120px;
-                -webkit-animation: spin 2s linear infinite;
-                animation: spin 2s linear infinite;
-            }
+		<script>
+			function move() {
+				const elem = document.getElementById("myBar");
+				let width = 0;
+				frame();
+				function frame() {
+					if (width < 100) {
+						width += 0.1;
+						elem.style.width = width + "%";
+						setTimeout(frame, 10 + width / 2);
+					}
+				}
+			}
+			move();
+		</script>
+	</app>
 
-            @-webkit-keyframes spin {
-                0% {
-                    -webkit-transform: rotate(0deg);
-                }
-
-                100% {
-                    -webkit-transform: rotate(360deg);
-                }
-            }
-
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        </style>
-
-        <div id="myProgress">
-            <div id="myBar"></div>
-        </div>
-        <br /> <br />
-        <div class="fullWidht">
-            <div class="loader"></div>
-        </div>
-
-
-        <script>
-            function move() {
-                const elem = document.getElementById("myBar");
-                let width = 0;
-                frame();
-                function frame() {
-                    if (width < 100) {
-                        width++;
-                        elem.style.width = width + "%";
-						setTimeout(frame, width * width / 2);
-                    }
-                }
-            }
-            move();
-        </script>
-    </app>
-
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    <script src="_framework/blazor.webassembly.js"></script>
+	<div id="blazor-error-ui">
+		An unhandled error has occurred.
+		<a href="" class="reload">Reload</a>
+		<a class="dismiss">🗙</a>
+	</div>
+	<script src="_framework/blazor.webassembly.js"></script>
 </body>
 
 </html>
