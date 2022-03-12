@@ -11,6 +11,10 @@
 		{
 			"path": "datasets",
 			"name": "times-futebol.json"
+		},
+		{
+			"path": "datasets",
+			"name": "enquente_amigos.json"
 		}
 	]
 }
