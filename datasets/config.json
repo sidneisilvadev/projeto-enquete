@@ -11,10 +11,6 @@
 		},
 		{
 			"path": "datasets/futebol",
-			"name": "times-futebol.json"
-		},
-		{
-			"path": "datasets/futebol",
 			"name": "brasileirao.json"
 		},
 		{
