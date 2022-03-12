@@ -11,11 +11,23 @@
 		},
 		{
 			"path": "datasets/futebol",
-			"name": "times-futebol.json"
+			"name": "brasileirao.json"
 		},
 		{
-			"path": "datasets/futebol",
-			"name": "brasileirao.json"
+			"path": "datasets/futebol/carioca",
+			"name": "serie-a.json"
+		},
+		{
+			"path": "datasets/futebol/carioca",
+			"name": "serie-b.json"
+		},
+		{
+			"path": "datasets/futebol/paulista",
+			"name": "serie-a.json"
+		},
+		{
+			"path": "datasets/futebol/paulista",
+			"name": "serie-b.json"
 		},
 		{
 			"path": "datasets/pessoal",
