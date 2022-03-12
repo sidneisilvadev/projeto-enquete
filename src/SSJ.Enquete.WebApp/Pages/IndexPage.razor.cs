@@ -16,23 +16,22 @@ namespace SSJ.Enquete.WebApp.Pages
 		[Inject]
 		private JavaScriptProxy JavaScriptProxy { get; set; }
 
-		protected override async Task OnParametersSetAsync()
+		private string Resources { get; set; } = "datasets/candidatos.json";
+
+		private async void List()
 		{
-			await base.OnParametersSetAsync();
-			await Repositorio.Enquete.Load();
+			Repositorio.Enquete.RemoverTodos();
+			await Repositorio.List(OnNotifyChange, Resources);
 		}
 
-		private async void Adicionar()
-		{
-			Repositorio.Enquete.Adicionar(new Candidato());
-			await Task.CompletedTask;
-		}
+		private void Add() => Repositorio.Enquete.Adicionar(new Candidato());
 
-		private async void CandidatoView_DoRemove(Candidato candidato)
-		{
-			Repositorio.Enquete.Remover(candidato);
-			await Task.CompletedTask;
-		}
+		private void RemoveAll() => Repositorio.Enquete.RemoverTodos();
+
+		private void CandidatoView_DoRemove(Candidato candidato) => Repositorio.Enquete.Remover(candidato);
+
+		private void NotifyChange() { }
+		private EventCallback OnNotifyChange => EventCallback.Factory.Create(this, NotifyChange);
 
 		public async Task Download()
 		{

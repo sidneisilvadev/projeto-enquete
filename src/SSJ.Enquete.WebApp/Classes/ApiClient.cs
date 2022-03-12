@@ -19,10 +19,14 @@ namespace SSJ.Enquete.WebApp.Classes
 			return JsonConvert.DeserializeObject<TObject>(jsonString);
 		}
 
-		public async Task<List<Candidato>> GetCandidatos()
+		public async Task<List<Candidato>> GetCandidatos(string resource)
 		{
-			var setup = await GetAsync<Setup>("datasets/setup.json");
-			return await GetAsync<List<Candidato>>(setup.Resource);
+			var url = resource ?? await GetRecurso();
+			return await GetAsync<List<Candidato>>(url);
 		}
+
+		public async Task<string> GetRecurso() => (await GetConfig()).Recurso;
+
+		private async Task<Config> GetConfig() => await GetAsync<Config>("datasets/config.json") ?? new Config();
 	}
 }

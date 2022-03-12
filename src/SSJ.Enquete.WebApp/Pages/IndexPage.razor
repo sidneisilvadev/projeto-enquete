@@ -1,11 +1,11 @@
 ﻿<div class="container" style="max-width: 100vw !important;">
 	<div class="d-block">
 		<div style="margin-top: 1px">
-			<button class="btn btn-success" @onclick=Adicionar><span class="oi oi-plus"></span></button>
-			<button class="btn btn-primary" @onclick=Download><span class="oi oi-data-transfer-download"></span></button>
-			<input type="text" class="col-md-2 border-0" readonly="readonly" placeholder="Nome" />
-			<input type="text" class="col-md-7 border-0" readonly="readonly" placeholder="Descrição" />
-			<input type="text" class="col-md-1 border-0" readonly="readonly" placeholder="Votos" />
+			<input type="text" class="col-md-2" placeholder="resources" @bind=Resources />
+			<button class="btn btn-primary" @onclick=List><span class="oi oi-list"></span></button>
+			<button class="btn btn-success" @onclick=Add><span class="oi oi-plus"></span></button>
+			<button class="btn btn-danger" @onclick=RemoveAll><span class="oi oi-delete"></span></button>
+			<button class="btn btn-warning" @onclick=Download><span class="oi oi-data-transfer-download"></span></button>
 		</div>
 		<hr />
 	</div>
