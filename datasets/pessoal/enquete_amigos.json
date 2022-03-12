@@ -3,22 +3,22 @@
     "Id": 13,
     "Nome": "bruno",
     "Descricao": null,
-    "Votos": 10,
-    "ImageUrl": null,
-    "MensagemVencendo": "estou ganhado ",
-    "MensagemPerdendo": "estou perdendo ",
-    "MensagemEmpatado": "emptado",
-    "MensagemNoCentro": "centro "
+    "Votos": 0,
+		"ImageUrl": "https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cindra/imagens/sem.jpg.gif/image",
+    "MensagemVencendo": "ganhando",
+    "MensagemPerdendo": "perdendo",
+    "MensagemEmpatado": "empatado",
+    "MensagemNoCentro": "centro"
   },
   {
     "Id": 14,
     "Nome": "sidnei",
     "Descricao": null,
-    "Votos": 10,
-    "ImageUrl": null,
-    "MensagemVencendo": "ganhando ",
+    "Votos": 0,
+		"ImageUrl": "https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cindra/imagens/sem.jpg.gif/image",
+    "MensagemVencendo": "ganhando",
     "MensagemPerdendo": "perdendo",
-    "MensagemEmpatado": "centro",
-    "MensagemNoCentro": "centro01"
+    "MensagemEmpatado": "empatado",
+    "MensagemNoCentro": "centro"
   }
 ]
