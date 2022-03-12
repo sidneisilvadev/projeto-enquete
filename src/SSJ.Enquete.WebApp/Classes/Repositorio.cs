@@ -8,6 +8,7 @@ namespace SSJ.Enquete.WebApp.Classes
 	{
 		private readonly IServiceProvider _serviceProvider;
 		public Enquete Enquete { get; }
+		public Config Config { get; private set; }
 
 		public Repositorio(IServiceProvider serviceProvider)
 		{
@@ -15,21 +16,20 @@ namespace SSJ.Enquete.WebApp.Classes
 			Enquete = new Enquete(serviceProvider);
 		}
 
-		public async Task List(EventCallback onChange, string resource = null)
+		public async Task LoadConfig()
 		{
 			var httpClient = _serviceProvider.GetHttpClient("GitHub");
 			var apiClient = new ApiClient(httpClient);
-			try
-			{
-				var candidatos = await apiClient.GetCandidatos(resource);
-				Enquete.Adicionar(candidatos);
-			}
-			catch
-			{
-				var candidatos = await apiClient.GetCandidatos(null);
-				Enquete.Adicionar(candidatos);
-			}
-			await onChange.InvokeAsync(this);
+			Config = await apiClient.GetConfig();
+		}
+
+		public async Task List(EventCallback onFinish, string resource = null)
+		{
+			var httpClient = _serviceProvider.GetHttpClient("GitHub");
+			var apiClient = new ApiClient(httpClient);
+			var candidatos = await apiClient.GetCandidatos(resource);
+			Enquete.Adicionar(candidatos);
+			await onFinish.InvokeAsync(this);
 		}
 	}
 }

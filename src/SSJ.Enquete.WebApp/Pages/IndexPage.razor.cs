@@ -16,7 +16,7 @@ namespace SSJ.Enquete.WebApp.Pages
 		[Inject]
 		private JavaScriptProxy JavaScriptProxy { get; set; }
 
-		private string Resources { get; set; } = "datasets/candidatos.json";
+		private string Resources { get; set; }
 
 		private async void List()
 		{
@@ -30,8 +30,7 @@ namespace SSJ.Enquete.WebApp.Pages
 
 		private void CandidatoView_DoRemove(Candidato candidato) => Repositorio.Enquete.Remover(candidato);
 
-		private void NotifyChange() { }
-		private EventCallback OnNotifyChange => EventCallback.Factory.Create(this, NotifyChange);
+		private EventCallback OnNotifyChange => EventCallback.Factory.Create(this, () => { });
 
 		public async Task Download()
 		{

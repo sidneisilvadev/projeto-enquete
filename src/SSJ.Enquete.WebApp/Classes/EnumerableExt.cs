@@ -9,7 +9,7 @@ namespace SSJ.Enquete.WebApp.Classes
 		public static TSource FirstWithMax<TSource, TSelector>(this IEnumerable<TSource> source, Func<TSource, TSelector> selector)
 		{
 			if (!source.Any())
-				return default(TSource);
+				return default;
 
 			var max = source.Max(selector);
 			return source.FirstOrDefault(i => selector(i).Equals(max));

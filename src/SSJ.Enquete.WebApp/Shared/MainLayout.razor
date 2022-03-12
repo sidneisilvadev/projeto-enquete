@@ -13,14 +13,3 @@
 		@Body
 	</div>
 </div>
-
-@code {
-	private bool collapseNavMenu = false;
-
-	private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-	public void ToggleNavMenu()
-	{
-		collapseNavMenu = !collapseNavMenu;
-	}
-}

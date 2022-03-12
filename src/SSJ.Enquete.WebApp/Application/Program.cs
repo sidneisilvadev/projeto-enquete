@@ -21,7 +21,12 @@ namespace SSJ.Enquete.WebApp.Application
 			builder.Services.AddSingleton<Sequence>();
 			builder.Services.AddSingleton<Repositorio>();
 
-			await builder.Build().RunAsync();
+			var wasmHost = builder.Build();
+
+			var repositorio = wasmHost.Services.GetRequiredService<Repositorio>();
+			await repositorio.LoadConfig();
+
+			await wasmHost.RunAsync();
 		}
 	}
 }

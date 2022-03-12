@@ -27,6 +27,6 @@ namespace SSJ.Enquete.WebApp.Classes
 
 		public async Task<string> GetRecurso() => (await GetConfig()).Recurso;
 
-		private async Task<Config> GetConfig() => await GetAsync<Config>("datasets/config.json") ?? new Config();
+		public async Task<Config> GetConfig() => await GetAsync<Config>("datasets/config.json") ?? new Config();
 	}
 }
