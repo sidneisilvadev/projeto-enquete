@@ -1,24 +1,24 @@
 {
 	"arquivos": [
 		{
-			"path": "datasets",
-			"name": "candidatos.json"
-		},
-		{
-			"path": "datasets",
+			"path": "datasets/politica",
 			"name": "presidenciaveis.json"
 		},
 		{
-			"path": "datasets",
-			"name": "times-futebol.json"
+			"path": "datasets/politica",
+			"name": "candidatos.json"
 		},
 		{
-			"path": "datasets",
-			"name": "enquete_amigos.json"
+			"path": "datasets/futebol",
+			"name": "times-futebol.json"
 		},
 		{
 			"path": "datasets/futebol",
 			"name": "brasileirao.json"
+		},
+		{
+			"path": "datasets/pessoal",
+			"name": "enquete_amigos.json"
 		}
 	]
 }
