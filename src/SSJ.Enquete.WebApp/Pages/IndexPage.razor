@@ -1,20 +1,25 @@
 ﻿<div class="container" style="max-width: 100vw !important;">
 	<div class="d-block">
 		<div style="margin-top: 1px">
-			<select class="custom-select col-md-3" id="cbRecurso" name="cbRecurso" @bind=Resources >
-				@foreach (var item in Repositorio?.Config?.Arquivos)
+			<select class="form-control select2 custom-select col-md-3" id="cbRecurso" name="cbRecurso" @bind=Resources>
+				@foreach (var group in Repositorio?.Config?.Arquivos.GroupBy(a => a.Group))
 				{
-					<option value="@item.Recurso">@item.Recurso</option>
+					<optgroup label=@group.Key>
+						@foreach (var item in group)
+						{
+							<option value="@item.Recurso">@item.Name</option>
+						}
+					</optgroup>
 				}
 			</select>
-			<button class="btn btn-primary" @onclick=List title="Carrega os candidatos do Recurso selecionado para a enquete"><span class="oi oi-reload"></span></button>
+			<button class="btn btn-primary" @onclick=List title="Carrega os candidatos do Recurso selecionado para a enquete"><span class="oi oi-loop-circular"></span></button>
 			<button class="btn btn-success" @onclick=Add title="Adiciona um novo candidato na enquete"><span class="oi oi-plus"></span></button>
 			<button class="btn btn-danger" @onclick=RemoveAll title="Remove todos os candidatos da enquete"><span class="oi oi-delete"></span></button>
 			<button class="btn btn-warning" @onclick=Download title="Efetua o Download dos candidatos da enquete para um arquivo json"><span class="oi oi-data-transfer-download"></span></button>
 		</div>
 		<hr />
 	</div>
-	
+
 	@foreach (var candidato in Repositorio.Enquete.Candidatos)
 	{
 		<CandidatoView @key=candidato.Id Candidato=candidato OnRemove=CandidatoView_DoRemove />
