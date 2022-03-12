@@ -1,1 +1,46 @@
-
+[
+	{
+		"Id": 1,
+		"Nome": "Corinthians",
+		"Descricao": "Corinthians",
+		"Votos": 0,
+		"ImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/800px-Flamengo_braz_logo.svg.png",
+		"MensagemVencendo": "Tô Ganhando, Mengoooo!",
+		"MensagemPerdendo": "Virei Lanterninha do Campeonato",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Vamos pra cima deles Mengo"
+	},
+	{
+		"Id": 2,
+		"Nome": "São Paulo",
+		"Descricao": "São Paulo",
+		"Votos": 0,
+		"ImageUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/a/a3/FFC_escudo.svg/1200px-FFC_escudo.svg.png",
+		"MensagemVencendo": "Passei na Frente, Flusão!",
+		"MensagemPerdendo": "Não quero perder de novo não...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Virei um centrão..."
+	},
+	{
+		"Id": 3,
+		"Nome": "Palmeiras",
+		"Descricao": "Palmeiras",
+		"Votos": 0,
+		"ImageUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/a/a3/FFC_escudo.svg/1200px-FFC_escudo.svg.png",
+		"MensagemVencendo": "Passei na Frente!",
+		"MensagemPerdendo": "Não quero perder de novo não...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Me esqueceream no meio da tabela..."
+	},
+	{
+		"Id": 4,
+		"Nome": "Santos FC",
+		"Descricao": "Santos FC",
+		"Votos": 0,
+		"ImageUrl": "https://upload.wikimedia.org/wikipedia/pt/thumb/a/a3/FFC_escudo.svg/1200px-FFC_escudo.svg.png",
+		"MensagemVencendo": "Passei na Frente!",
+		"MensagemPerdendo": "Não quero perder de novo não...",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Me esqueceream no meio da tabela..."
+	}
+]
