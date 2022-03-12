@@ -1,8 +1,24 @@
-﻿<div class="d-inline-block" style="margin-top: 3px">
-	<button class="btn btn-danger" @onclick="Remover">X</button>
-	<input type="text" class="col-md-2" @bind="Candidato.Nome" placeholder="Nome" />
-	<input type="text" class="col-md-3" @bind="Candidato.Descricao" placeholder="Descricao" />
-	<input type="text" class="col-md-4" @bind="Candidato.ImageUrl" placeholder="Url da Imagem" />
-	<input type="text" class="col-md-1" @bind="Candidato.Votos" placeholder="Quantidade de votos" />
-	<br />
+﻿<div class="d-block">
+	<div style="margin-top: 1px">
+		<button class="btn btn-danger" @onclick="Remover"><span class="oi oi-delete"></span></button>
+		<input type="text" class="col-md-3" @bind="Candidato.Nome" placeholder="Nome" />
+		<input type="text" class="col-md-7" @bind="Candidato.Descricao" placeholder="Descricao" />
+		<input type="text" class="col-md-1" @bind="Candidato.Votos" placeholder="Quantidade de votos" />
+	</div>
+	<div style="margin-top: 1px">
+		<input type="text" class="col-md-12" @bind="Candidato.ImageUrl" placeholder="Url da Imagem" />
+	</div>
+	<div style="margin-top: 1px">
+		<input type="text" class="col-md-12" @bind="Candidato.MensagemPerdendo" placeholder="Mensagem Perdendo" />
+	</div>
+	<div style="margin-top: 1px">
+		<input type="text" class="col-md-12" @bind="Candidato.MensagemVencendo" placeholder="Mensagem Vencendo" />
+	</div>
+	<div style="margin-top: 1px">
+		<input type="text" class="col-md-12" @bind="Candidato.MensagemEmpatado" placeholder="Mensagem Empatado" />
+	</div>
+	<div style="margin-top: 1px">
+		<input type="text" class="col-md-12" @bind="Candidato.MensagemNoCentro" placeholder="Mensagem No Centro" />
+	</div>
+	<hr />
 </div>

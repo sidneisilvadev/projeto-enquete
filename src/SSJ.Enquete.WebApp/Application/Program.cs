@@ -17,6 +17,7 @@ namespace SSJ.Enquete.WebApp.Application
 			builder.Services.AddHttpClient("GitHub", http => http.BaseAddress = new Uri("https://raw.githubusercontent.com/sidneisilvadev/projeto-enquete/master/"));
 			builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
+			builder.Services.AddSingleton<JavaScriptProxy>();
 			builder.Services.AddSingleton<Sequence>();
 			builder.Services.AddSingleton<Repositorio>();
 
