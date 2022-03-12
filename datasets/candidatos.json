@@ -1,32 +1,46 @@
 [
 	{
+		"Id": 1,
 		"Nome": "Bolsonaro",
+		"Descricao": "",
+		"Votos": 0,
+		"ImageUrl": "https://avatars.githubusercontent.com/u/46561034?v=4",
 		"MensagemVencendo": "Tô Ganhando, tá Okey?",
 		"MensagemPerdendo": "Decepcionado no tocante...",
 		"MensagemEmpatado": "Empatou... Votem em mim!",
-		"MensagemNoCentro": "Virei um centrão...",
-		"Descricao": "",
-		"ImageUrl": "https://avatars.githubusercontent.com/u/46561034?v=4",
-		"Votos": 0
+		"MensagemNoCentro": "Virei um centrão..."
 	},
 	{
+		"Id": 4,
+		"Nome": "Ciro Gomes",
+		"Descricao": null,
+		"Votos": 0,
+		"ImageUrl": "https://pt.wikipedia.org/wiki/Ciro_Gomes#/media/Ficheiro:Ciro_Gomes.jpg",
+		"MensagemVencendo": "WOW... tô liderando",
+		"MensagemPerdendo": "#Chateado!",
+		"MensagemEmpatado": "Empatou... Votem em mim!",
+		"MensagemNoCentro": "Virei um centrão..."
+	},
+	{
+		"Id": 2,
 		"Nome": "Lula",
+		"Descricao": "",
+		"Votos": 0,
+		"ImageUrl": "https://conteudo.imguol.com.br/c/noticias/41/2021/11/11/11nov2021---o-ex-presidente-luiz-inacio-lula-da-silva-pt-em-berlim-na-alemanha-1636644440404_v2_450x337.jpg",
 		"MensagemVencendo": "Passei na Frente, companheiro!",
 		"MensagemPerdendo": "Não quero perder de novo não...",
 		"MensagemEmpatado": "Empatou... Votem em mim!",
-		"MensagemNoCentro": "Virei um centrão...",
-		"Descricao": "",
-		"ImageUrl": "https://conteudo.imguol.com.br/c/noticias/41/2021/11/11/11nov2021---o-ex-presidente-luiz-inacio-lula-da-silva-pt-em-berlim-na-alemanha-1636644440404_v2_450x337.jpg",
-		"Votos": 0
+		"MensagemNoCentro": "Virei um centrão..."
 	},
 	{
+		"Id": 3,
 		"Nome": "Sérgio Moro",
+		"Descricao": "",
+		"Votos": 0,
+		"ImageUrl": "https://midias.correiobraziliense.com.br/_midias/jpg/2022/02/04/675x450/1_whatsapp_image_2022_01_23_at_17_16_03-7414263.jpeg?20220204223446?20220204223446",
 		"MensagemVencendo": "To indo pra galera!!!",
 		"MensagemPerdendo": "Peço as devidas escusas...",
 		"MensagemEmpatado": "Empatou... Votem em mim!",
-		"MensagemNoCentro": "Virei um centrão...",
-		"Descricao": "",
-		"ImageUrl": "https://midias.correiobraziliense.com.br/_midias/jpg/2022/02/04/675x450/1_whatsapp_image_2022_01_23_at_17_16_03-7414263.jpeg?20220204223446?20220204223446",
-		"Votos": 0
+		"MensagemNoCentro": "Virei um centrão..."
 	}
 ]
