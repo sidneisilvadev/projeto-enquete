@@ -11,6 +11,14 @@
 		{
 			"path": "datasets",
 			"name": "times-futebol.json"
+		},
+		{
+			"path": "datasets",
+			"name": "enquete_amigos.json"
+		},
+		{
+			"path": "datasets/futebol",
+			"name": "brasileirao.json"
 		}
 	]
 }
