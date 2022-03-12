@@ -7,17 +7,17 @@
 
 	<div style="max-width: 500px;">
 		<div style="margin-top: 6px"></div>
-		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-10))>-10</button>
-		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(-1))>-</button>
+		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-10)) title="Remove 10 Votos">-10</button>
+		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(-1)) title="Remove 1 Voto">-</button>
 		<input type="text" readonly="readonly" class="col-md-2" @bind=Candidato.Votos />
-		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(+1))>+</button>
-		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+10))>+10</button>
+		<button class="btn btn-primary col-md-2" @onclick=@(e => Add(+1)) title="Adiciona 1 Voto">+</button>
+		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+10)) title="Adiciona 10 Votos">+10</button>
 
 		<div style="margin-top: 6px"></div>
-		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-100))>-100</button>
-		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(-50))>-50</button>
-		<button class="btn btn-danger col-md-2" @onclick=@(e => Reset())>Zerar</button>
-		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(+50))>+50</button>
-		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+100))>+100</button>
+		<button class="btn btn-secondary col-md-2" @onclick=@(e => Add(-100)) title="Remove 100 Votos">-100</button>
+		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(-50)) title="Remove 50 Votos">-50</button>
+		<button class="btn btn-danger col-md-2" @onclick=@(e => Reset()) title="Zera o total de Votos">Zerar</button>
+		<button class="btn btn-warning col-md-2" @onclick=@(e => Add(+50)) title="Adiciona 50 Votos">+50</button>
+		<button class="btn btn-success col-md-2" @onclick=@(e => Add(+100)) title="Adiciona 100 Votos">+100</button>
 	</div>
 </div>

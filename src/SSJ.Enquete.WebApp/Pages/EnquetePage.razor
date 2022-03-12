@@ -1,6 +1,8 @@
-﻿<h1>Quem Ganha Hoje?</h1>
+﻿<div class="card-group" style="max-width: 100vw !important; justify-content: center">
+	<h1>Quem Ganha Hoje?</h1>
+</div>
 
-<div class="card-group" style="max-width: 100vw !important;">
+<div class="card-group" style="max-width: 100vw !important; justify-content: center">
 	@foreach (var candidato in Repositorio.Enquete.Candidatos)
 	{
 		<CandidatoCard @key="candidato.Id" Candidato=candidato OnChange=NotifyChange />

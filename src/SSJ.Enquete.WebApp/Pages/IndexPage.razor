@@ -7,10 +7,10 @@
 					<option value="@item.Recurso">@item.Recurso</option>
 				}
 			</select>
-			<button class="btn btn-primary" @onclick=List><span class="oi oi-list"></span></button>
-			<button class="btn btn-success" @onclick=Add><span class="oi oi-plus"></span></button>
-			<button class="btn btn-danger" @onclick=RemoveAll><span class="oi oi-delete"></span></button>
-			<button class="btn btn-warning" @onclick=Download><span class="oi oi-data-transfer-download"></span></button>
+			<button class="btn btn-primary" @onclick=List title="Carrega os candidatos do Recurso selecionado para a enquete"><span class="oi oi-reload"></span></button>
+			<button class="btn btn-success" @onclick=Add title="Adiciona um novo candidato na enquete"><span class="oi oi-plus"></span></button>
+			<button class="btn btn-danger" @onclick=RemoveAll title="Remove todos os candidatos da enquete"><span class="oi oi-delete"></span></button>
+			<button class="btn btn-warning" @onclick=Download title="Efetua o Download dos candidatos da enquete para um arquivo json"><span class="oi oi-data-transfer-download"></span></button>
 		</div>
 		<hr />
 	</div>
