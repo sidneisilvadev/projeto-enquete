@@ -1,7 +1,7 @@
 ﻿<div class="container" style="max-width: 100vw !important;">
 	<div class="d-block">
 		<div style="margin-top: 1px">
-			<select class="form-control select2 custom-select col-md-3" id="cbRecurso" name="cbRecurso" @bind=Resources>
+			<select class="form-control select2 custom-select col-md-3" id="cbRecurso" name="cbRecurso" @bind=Recurso>
 				@foreach (var group in Repositorio?.Config?.Arquivos.GroupBy(a => a.Group))
 				{
 					<optgroup label=@group.Key>

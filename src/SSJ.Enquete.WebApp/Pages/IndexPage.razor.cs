@@ -16,12 +16,12 @@ namespace SSJ.Enquete.WebApp.Pages
 		[Inject]
 		private JavaScriptProxy JavaScriptProxy { get; set; }
 
-		private string Resources { get; set; }
+		private string Recurso { get; set; }
 
 		private async void List()
 		{
 			Repositorio.Enquete.RemoverTodos();
-			await Repositorio.List(OnNotifyChange, Resources);
+			await Repositorio.List(OnNotifyChange, Recurso);
 		}
 
 		private void Add() => Repositorio.Enquete.Adicionar(new Candidato());
@@ -37,7 +37,7 @@ namespace SSJ.Enquete.WebApp.Pages
 			var candidatos = Repositorio.Enquete.Candidatos.OrderByDescending(c => c.Votos).ThenBy(c => c.Nome);
 			var jsonString = JsonConvert.SerializeObject(candidatos, Formatting.Indented);
 			var file = Encoding.UTF8.GetBytes(jsonString);
-			await JavaScriptProxy.BlazorDownloadFile(file, "application/json", "enquete.json");
+			await JavaScriptProxy.BlazorDownloadFile(file, "application/json", (Recurso ?? Repositorio?.Config?.Recurso)?.Replace("/", ";"));
 		}
 	}
 }
