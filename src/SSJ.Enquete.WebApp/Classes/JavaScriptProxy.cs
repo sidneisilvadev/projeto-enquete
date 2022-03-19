@@ -12,36 +12,30 @@ namespace SSJ.Enquete.WebApp.Classes
 
 		public JavaScriptProxy(IJSRuntime jsRuntime) => _jsRuntime = jsRuntime;
 
-		public async Task BlazorDownloadFile(object content, string contentType, string fileName)
+		public async Task BlazorDownloadFile<TObject>(string fileName, TObject @object, string contentType = "application/json")
 		{
-			var jsonString = JsonConvert.SerializeObject(content, Formatting.Indented);
-			await BlazorDownloadFile(jsonString, contentType, Path.GetFileName(fileName));
+			var jsonString = JsonConvert.SerializeObject(@object, Formatting.Indented);
+			await BlazorDownloadFile(fileName: fileName, stringContent: jsonString, contentType: contentType);
 		}
 
-		public async Task BlazorDownloadFile(string stringContent, string contentType, string fileName)
+		public async Task BlazorDownloadFile(string fileName, string stringContent, string contentType = "text/plain")
 		{
 			var content = Encoding.UTF8.GetBytes(stringContent);
-			await BlazorDownloadFile(content, contentType, Path.GetFileName(fileName));
+			await BlazorDownloadFile(fileName: fileName, content: content, contentType: contentType);
 		}
 
-		public async Task BlazorDownloadFile(string fileName, string contentType)
-		{
-			var fileInfo = new FileInfo(fileName);
-			await BlazorDownloadFile(fileInfo, contentType, Path.GetFileName(fileName));
-		}
-
-		public async Task BlazorDownloadFile(FileInfo fileInfo, string contentType, string fileName)
+		public async Task BlazorDownloadFile(FileInfo fileInfo, string contentType, string fileName = null)
 		{
 			using var stream = fileInfo.OpenRead();
-			await BlazorDownloadFile(stream, contentType, fileName);
+			await BlazorDownloadFile(fileName: fileName ?? fileInfo.Name, stream: stream, contentType: contentType);
 		}
 
-		public async Task BlazorDownloadFile(Stream stream, string contentType, string fileName)
+		public async Task BlazorDownloadFile(string fileName, Stream stream, string contentType)
 		{
 			using var memoryStream = new MemoryStream();
 			stream.CopyTo(memoryStream);
 			var content = memoryStream.ToArray();
-			await BlazorDownloadFile(content, contentType, fileName);
+			await BlazorDownloadFile(fileName: fileName, content: content, contentType: contentType);
 		}
 
 		public async Task BlazorDownloadFile(byte[] content, string contentType, string fileName)
