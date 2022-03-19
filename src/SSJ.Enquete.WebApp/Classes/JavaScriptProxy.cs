@@ -46,7 +46,7 @@ namespace SSJ.Enquete.WebApp.Classes
 
 		public async Task BlazorDownloadFile(byte[] content, string contentType, string fileName)
 		{
-			await _jsRuntime.InvokeVoidAsync("blazorDownloadFile", fileName, contentType, content);
+			await _jsRuntime.InvokeVoidAsync("blazorDownloadFileNet50", fileName, contentType, content);
 		}
 	}
 }
