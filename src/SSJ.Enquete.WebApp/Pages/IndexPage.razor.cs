@@ -35,9 +35,7 @@ namespace SSJ.Enquete.WebApp.Pages
 		public async Task Download()
 		{
 			var candidatos = Repositorio.Enquete.Candidatos.OrderByDescending(c => c.Votos).ThenBy(c => c.Nome);
-			var jsonString = JsonConvert.SerializeObject(candidatos, Formatting.Indented);
-			var file = Encoding.UTF8.GetBytes(jsonString);
-			await JavaScriptProxy.BlazorDownloadFile(file, "application/json", (Recurso ?? Repositorio?.Config?.Recurso)?.Replace("/", ";"));
+			await JavaScriptProxy.BlazorDownloadFile(candidatos, "application/json", (Recurso ?? Repositorio?.Config?.Recurso)?.Replace("/", ";"));
 		}
 	}
 }
