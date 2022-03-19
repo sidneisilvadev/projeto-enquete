@@ -1,4 +1,4 @@
-﻿window.blazorDownloadFileNet60 = (filename, contentType, content) => {
+﻿window.blazorDownloadFile = (filename, contentType, content) => {
     // Create the URL
     const file = new File([content], filename, { type: contentType });
     const exportUrl = URL.createObjectURL(file);
