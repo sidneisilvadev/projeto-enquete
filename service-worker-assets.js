@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-P5cnsodw9PUHz6tAotjCzViwUnYLGF3l8kew4XmiKPc=",
+      "hash": "sha256-Ay8CvuwTLvHnxaaMHe5B\/VyJ6Ov6f8Dha7tyDjWPuU8=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/Newtonsoft.Json.dll"
     },
     {
-      "hash": "sha256-Eic8PeKB4wDgeHTw2vDj9su3vY8gNkmTYFFfXchSj0k=",
+      "hash": "sha256-+umx8qXdfztfjgsVO1W9taZSd7rh8I3bKx1N5wwrsHs=",
       "url": "_framework\/SSJ.Enquete.WebApp.dll"
     },
     {
@@ -321,7 +321,7 @@
       "url": "js\/blazorDownloadFile.js"
     },
     {
-      "hash": "sha256-nLmBNHUl7u63wVXrQNkVyclCWM6bnBtoA9lKEBMNatU=",
+      "hash": "sha256-N32o+ayZWq73SiK4JcxxkIUWVDeA86TVqkfV4IH4fU0=",
       "url": "manifest.json"
     },
     {
@@ -333,5 +333,5 @@
       "url": "staticwebapp.config.json"
     }
   ],
-  "version": "6TjPyBTy"
+  "version": "n4H9Bifr"
 };
