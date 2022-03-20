@@ -1,8 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Net.Http;
-
-namespace SSJ.Enquete.WebApp.Classes
+﻿namespace SSJ.Enquete.WebApp.Classes
 {
 	public static class ServiceProviderExt
 	{
