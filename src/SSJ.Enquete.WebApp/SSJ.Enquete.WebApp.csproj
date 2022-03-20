@@ -6,7 +6,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
 		<BlazorCacheBootResources>false</BlazorCacheBootResources>
-		<AssemblyVersion>2022.03.20.2051</AssemblyVersion>
+		<AssemblyVersion>2022.03.20.2058</AssemblyVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
