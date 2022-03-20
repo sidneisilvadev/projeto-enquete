@@ -33,7 +33,7 @@
       "url": "_framework\/icudt.dat"
     },
     {
-      "hash": "sha256-1bIxNQF6RCIDt7xMrndKVJNvyOZab3zJ2\/ynUNjLoiE=",
+      "hash": "sha256-PoIxo1kpqZOuhm3LJGzspIG9nRWaAhtmUqnUBX7h6RA=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -109,7 +109,7 @@
       "url": "_framework\/Newtonsoft.Json.dll"
     },
     {
-      "hash": "sha256-fbG9HacOtS4+jIwD\/ct7D2QR5m2Uy5ibWBIkFKpaX+8=",
+      "hash": "sha256-woLkX14oKS6OgzeL0HH1ZNHjfpZW1+E9Dl1zvGlfook=",
       "url": "_framework\/SSJ.Enquete.WebApp.dll"
     },
     {
@@ -329,5 +329,5 @@
       "url": "staticwebapp.config.json"
     }
   ],
-  "version": "Dzmzehe5"
+  "version": "PQZvYZF4"
 };
