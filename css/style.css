@@ -1,0 +1,48 @@
+﻿.HBox {
+    width: auto;
+    height: auto;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+}
+
+.VBox {
+    width: auto;
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.top {
+    justify-content: flex-start;
+}
+
+.bottom {
+    justify-content: flex-end;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.center {
+    align-self: center;
+    justify-content: center;
+}
+
+.center-around {
+    justify-content: space-around;
+}
+
+.center-between {
+    justify-content: space-between;
+}
+
+.center-evenly {
+    justify-content: space-evenly;
+}
