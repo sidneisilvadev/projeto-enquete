@@ -249,6 +249,10 @@
       "url": "SSJ.Enquete.WebApp.styles.css"
     },
     {
+      "hash": "sha256-KHlwQxBJI\/xSM8FF9i4pPUq4pD\/0e3RNao0ixebLKAw=",
+      "url": ".gitattributes"
+    },
+    {
       "hash": "sha256-kfXT+\/7PwnK7UBTMq8\/AX20+soj7u1sV\/U1lCtnmSZI=",
       "url": "css\/app.css"
     },
@@ -329,5 +333,5 @@
       "url": "staticwebapp.config.json"
     }
   ],
-  "version": "PQZvYZF4"
+  "version": "EnpPbFgB"
 };
