@@ -1,9 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
-using Newtonsoft.Json;
 using SSJ.Enquete.WebApp.Classes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SSJ.Enquete.WebApp.Pages
 {
